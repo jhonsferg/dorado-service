@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static
+      cache:
+        period: 31556929
+
+dorado:
+  access:
+    secret: m6nsew32u6w4t55aw80b0bx82352i03xy51ld9p7h7364u3c4864clbc4w9x8439
+    expiration: 3600
+  refresh:
+    secret: fsjz262m019uqpu0mh2k2qe0l474h3m65o78t50fobst3p424uof27s720lqr84t
+
+logging:
+  level:
+    com.dorado: INFO
+    org.springframework.security: DEBUG
