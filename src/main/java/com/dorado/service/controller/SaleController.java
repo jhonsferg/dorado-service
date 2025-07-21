@@ -1,7 +1,6 @@
 package com.dorado.service.controller;
 
 import com.dorado.service.model.Sale;
-import com.dorado.service.model.SaleItem;
 import com.dorado.service.service.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +25,11 @@ public class SaleController {
         return this.saleService.getSaleById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    public Sale createSale(@RequestBody Sale sale) {
+        return this.saleService.createSale(sale);
     }
 
     @PutMapping("/{id}")

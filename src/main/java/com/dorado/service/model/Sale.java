@@ -14,11 +14,10 @@ public class Sale {
     private Double total;
     private String paymentMethod;
     private Long employeeId;
-    private Long branchId;
 
     public Sale() {}
 
-    public Sale(Long id, LocalDateTime date, String customerName, String customerPhone, List<SaleItem> items, Double subtotal, Double igv, Double total, String paymentMethod, Long employeeId, Long branchId) {
+    public Sale(Long id, LocalDateTime date, String customerName, String customerPhone, List<SaleItem> items, Double subtotal, Double igv, Double total, String paymentMethod, Long employeeId) {
         this.id = id;
         this.date = date;
         this.customerName = customerName;
@@ -29,7 +28,6 @@ public class Sale {
         this.total = total;
         this.paymentMethod = paymentMethod;
         this.employeeId = employeeId;
-        this.branchId = branchId;
     }
 
     public Long getId() {
@@ -110,13 +108,5 @@ public class Sale {
 
     public void setEmployeeId(Long employeeId) {
         this.employeeId = employeeId;
-    }
-
-    public Long getBranchId() {
-        return branchId;
-    }
-
-    public void setBranchId(Long branchId) {
-        this.branchId = branchId;
     }
 }
